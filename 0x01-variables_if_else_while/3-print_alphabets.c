@@ -1,25 +1,19 @@
 #include <stdio.h>
 
 /**
-* main - Print the alphabe
-* 
-* Return: Always 0 (Success)
+ * main -main function
+ *
+ * Return: Always 0
+ */
 
-*/
 int main(void)
 {
-int lowerCase = 'a';
-int upperCase = 'A';
-while (lowercase <= 'z')
-{
-putchar(lowerCase);
-lowerCase += 1;
-}
-while (upperCase <= 'z')
-{
-putcher(upperCase)
-upperCase += 1;	
-}
-putchar('\n');
-return (0);
+	char i;
+
+	for (i = 'a' ; i <= 'z' ; i++)
+		putchar(i);
+	for (i = 'A' ; i <= 'Z' ; i++)
+		putchar(i);
+	putchar('\n');
+	return (0);
 }
