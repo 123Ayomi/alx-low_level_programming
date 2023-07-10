@@ -1,3 +1,3 @@
 #0x0B. C - malloc, free
 
-Six questions on this task.
+Seven questions on this task.
