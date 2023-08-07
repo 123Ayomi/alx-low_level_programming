@@ -21,7 +21,7 @@ for (ayo = 0; text_content[ayo];)
 ayo++;
 }
 hg = open(filename, O_CREAT | O_RDWR | O_TRUNC, 0600);
-m = write(fd, text_content, len);
+m = write(hg, text_content, ayo);
 if (hg == -1 || m == -1)
 return (-1);
 close(hg);
