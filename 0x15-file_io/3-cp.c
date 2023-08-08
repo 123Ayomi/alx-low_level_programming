@@ -1,4 +1,4 @@
-:#include "main.h"
+#include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -58,7 +58,7 @@ int main(int argc, char *argv[])
 
 {
 
-int from, to, r, w;
+int f, j, roi, w;
 
 char *buffer;
 if (argc != 3)
@@ -67,30 +67,30 @@ dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 exit(97);
 }
 buffer = create_buffer(argv[2]);
-from = open(argv[1], O_RDONLY);
-r = read(from, buffer, 1024);
-to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
+f = open(argv[1], O_RDONLY);
+roi = read(f, buffer, 1024);
+j = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 do {
-if (from == -1 || r == -1)
+if (f == -1 || roi == -1)
 {
 dprintf(STDERR_FILENO,
 "Error: Can't read from file %s\n", argv[1]);
 free(buffer);
 exit(98);
 }
-w = write(to, buffer, r);
-if (to == -1 || w == -1)
+w = write(j, buffer, roi);
+if (j == -1 || w == -1)
 {
 dprintf(STDERR_FILENO,
 "Error: Can't write to %s\n", argv[2]);
 free(buffer);
 exit(99);
 }
-r = read(from, buffer, 1024);
-to = open(argv[2], O_WRONLY | O_APPEND);
+roi = read(f, buffer, 1024);
+j = open(argv[2], O_WRONLY | O_APPEND);
 } while (r > 0);
 free(buffer);
-close_file(from);
-close_file(to);
+close_file(f);
+close_file(j);
 return (0);
 }
