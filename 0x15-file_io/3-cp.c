@@ -16,15 +16,15 @@ char *create_buffer(char *file)
 
 {
 
-char *BF;
+char *buffer;
 BF = malloc(sizeof(char) * 1024);
-if (BF == NULL)
+if (buffer == NULL)
 {
 dprintf(STDERR_FILENO,
 "Error: Can't write to %s\n", file);
 exit(99);
 }
-return (BF);
+return (buffer);
 }
 /**
 * close_file - File descriptors will be closed.
@@ -73,10 +73,10 @@ do {
 if (love == -1 || p == -1)
 {
 dprintf(STDERR_FILENO,
-"Error: Can't read from file %s\n", argv[1]free(buffer);
+"Error: Can't read from file %s\n", argv[1]);free(buffer);
 exit(98);
 }
-b = write(to, buffer, p);
+b = write(no, buffer, p);
 if (no == -1 || b == -1)
 {dprintf(STDERR_FILENO,
 "Error: Can't write to %s\n", argv[2]);
