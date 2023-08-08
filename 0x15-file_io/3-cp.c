@@ -17,15 +17,28 @@ char *create_buffer(char *file)
 {
 
 char *buffer;
-BF = malloc(sizeof(char) * 1024);
-if (buffer == NULL)
-{
-dprintf(STDERR_FILENO,
-"Error: Can't write to %s\n", file);
-exit(99);
+
+
+        buffer = malloc(sizeof(char) * 1024);
+
+
+        if (buffer == NULL)
+
+        {
+
+                dprintf(STDERR_FILENO,
+
+                        "Error: Can't write to %s\n", file);
+
+                exit(99);
+
+        }
+
+
+        return (buffer);
+
 }
-return (buffer);
-}
+
 /**
 * close_file - File descriptors will be closed.
 * @fd: File descriptor closed
