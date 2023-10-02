@@ -1,0 +1,7 @@
+#0x0A. C - argc, argv
+
+
+
+THERE ARE ONLY 6 QUESTIONS ON THIS IS TASK 
+
+!!!GOODLUCK.
