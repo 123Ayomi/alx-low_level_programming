@@ -1,6 +1,6 @@
 #0x0B. C - malloc, free
 
 
-THERE ARE ONLY 7 QUESTIONS TO BE SOLVED ON THIS TASK.
+There are only 7 questions on this task.
 
-!!!GOODLUCK
+!!!Goodluck
